@@ -19,9 +19,9 @@ public class FrontController extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		map = new HashMap(); // init 에 hashmap 연결하기
-		map.put("/main.do", null);
+		map.put("/main.do", new MainController());
 		map.put("/memberList.do", new MemberListController()); // 맴버조회 컨트럴로 만들어서 바로 db로 이동하기
-		map.put("/voteMember.do", null);
+		map.put("/voteMember.do", new VoteMemberController());
 		map.put("/voteList.do", null);
 		map.put("/votResult.do", null);
 		
